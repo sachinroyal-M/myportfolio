@@ -22,8 +22,7 @@ nav a:hover { color:#0077b6; }
 .about-para {
   opacity: 0;
   animation: fadeInUp 1s forwards;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation-delay: 0.5s;
 }
 
 #para1 {
