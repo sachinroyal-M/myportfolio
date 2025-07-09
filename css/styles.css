@@ -19,7 +19,25 @@ nav a:hover { color:#0077b6; }
 @keyframes rotateText{0%,30%{opacity:1;}33%,100%{opacity:0;}}
 
 #about{padding:4rem 2rem;background:#fff;}
-.about-para{opacity:0;animation:fadeInUp 1s forwards;}
+.about-para {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+#para1 {
+  animation-delay: 0.3s;
+}
+
+#para2 {
+  animation-delay: 1s;
+}
+
+#para3 {
+  animation-delay: 1.8s;
+}
+
 #para1{animation-delay:0.5s;}#para2{animation-delay:1.2s;}#para3{animation-delay:1.9s;}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 
