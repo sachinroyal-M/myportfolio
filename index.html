@@ -33,12 +33,14 @@
 </section>
 
 <section id="about">
-  <h2 class="section-title">About Me</h2>
-  <p class="about-para">I’m currently in my third year ...</p>
+  <h2>About Me</h2>
+  <p class="about-para" id="about-full">
+    I’m currently in my third year of Bachelor of Technology in Information Technology at Velammal College of Engineering and Technology, Madurai. Over the course of my academic journey, I’ve developed strong fundamentals in computer science and programming. I have a deep interest in software development, web technologies, and solving complex problems. My aim is to become a skilled IT professional who can contribute to impactful projects and innovative solutions. When I experience burnout, I channel it into learning something new—an approach that consistently elevates me to the next level. Every new concept I explore helps me grow and climb higher with confidence and clarity.
+  </p>
 </section>
 
 <section id="skills">
-  <h2 class="section-title">My Skills</h2>
+  <h2>My Skills</h2>
   <div class="skills-grid">
     <div class="skill-card"><div class="skill-icon">💻</div><h3>Programming</h3><p>C, Java, Python</p></div>
     <div class="skill-card"><div class="skill-icon">🌐</div><h3>Web Development</h3><p>HTML, CSS, JavaScript</p></div>
@@ -47,22 +49,22 @@
 </section>
 
 <section id="education">
-  <h2 class="section-title">Education</h2>
+  <h2>Education</h2>
   <div class="edu-flow">
-    <div class="edu-item animate-edu">
+    <div class="edu-item">
       <div class="edu-point"></div>
       <div class="edu-content">
-        <h3 class="edu-title">Velammal COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
-        <p class="edu-degree">B.Tech IT (3rd Year)</p>
-        <p class="edu-year">2023–2027</p>
+        <h3>Velammal COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
+        <p class="edu-highlight-gold animate-text">B.Tech IT (3rd Year)</p>
+        <p class="edu-highlight-red animate-text">2023–2027</p>
       </div>
     </div>
-    <div class="edu-item animate-edu" style="animation-delay: 0.3s;">
+    <div class="edu-item">
       <div class="edu-point"></div>
       <div class="edu-content">
-        <h3 class="edu-title">AKNU S SUNDAR MATRIC HR SEC SCHOOL</h3>
-        <p class="edu-degree">Higher Secondary</p>
-        <p class="edu-year">2018–2022</p>
+        <h3>AKNU S SUNDAR MATRIC HR SEC SCHOOL</h3>
+        <p class="edu-highlight-gold animate-text">Higher Secondary</p>
+        <p class="edu-highlight-red animate-text">2018–2022</p>
       </div>
     </div>
   </div>
@@ -83,7 +85,7 @@
 </section>
 
 <section id="contact">
-  <h2 class="section-title">Get in Touch</h2>
+  <h2>Get in Touch</h2>
   <form>
     <input type="text" placeholder="Name" required>
     <input type="email" placeholder="Email" required>
@@ -98,16 +100,17 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const eduItems = document.querySelectorAll('.animate-edu');
+    const items = document.querySelectorAll('.animate-text');
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in-view');
-          observer.unobserve(e.target);
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2 });
-    eduItems.forEach(item => observer.observe(item));
+    }, { threshold: 0.3 });
+
+    items.forEach(item => observer.observe(item));
   });
 </script>
 
