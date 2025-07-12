@@ -11,12 +11,12 @@
 
 <nav>
   <ul>
-    <li><a href="#hero" class="reveal">Home</a></li>
-    <li><a href="#about" class="reveal">About</a></li>
-    <li><a href="#education" class="reveal">Education</a></li>
-    <li><a href="#skills" class="reveal">Skills</a></li>
-    <li><a href="#projects" class="reveal">Projects</a></li>
-    <li><a href="#contact" class="reveal">Contact</a></li>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -24,56 +24,46 @@
   <div class="hero-content">
     <img src="images/sachin.jpg" alt="Sachin Royal" loading="lazy">
     <h1>Hi, I'm <span>Sachin Royal M</span></h1>
-    <p class="typewriter">
-      Software Developer | Designer | Digital Marketer
+    <p class="rotating-text">
+      <span>Software Developer</span>
+      <span>Designer</span>
+      <span>Digital Marketer</span>
     </p>
   </div>
 </section>
 
 <section id="about" class="reveal">
   <h2>About Me</h2>
-  <p>I’m currently in my third year...</p>
+  <p>I’m currently in my third year of B.Tech in Information Technology...</p>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-icon">💻</div><h3>Programming</h3><p>C, Java, Python</p></div>
+    <div class="skill-card"><div class="skill-icon">🌐</div><h3>Web Development</h3><p>HTML, CSS, JavaScript</p></div>
+    <div class="skill-card"><div class="skill-icon">🗄️</div><h3>Database</h3><p>SQL</p></div>
+  </div>
 </section>
 
 <section id="education" class="reveal">
   <h2>Education</h2>
   <div class="edu-flow">
     <div class="edu-item">
-      <div class="edu-point">🎓</div>
-      <div class="edu-content animated-text">
+      <div class="edu-point"></div>
+      <div class="edu-content">
         <h3>Velammal COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
-        <p class="gold-text">B.Tech IT (3rd Year)</p>
-        <p class="red-text">2023–2027</p>
+        <p class="edu-highlight-gold">B.Tech IT (3rd Year)</p>
+        <p class="edu-highlight-red">2023–2027</p>
       </div>
     </div>
     <div class="edu-item">
-      <div class="edu-point">🎓</div>
-      <div class="edu-content animated-text" style="animation-delay:0.2s">
+      <div class="edu-point"></div>
+      <div class="edu-content">
         <h3>AKNU S SUNDAR MATRIC HR SEC SCHOOL</h3>
-        <p class="gold-text">Higher Secondary</p>
-        <p class="red-text">2018–2022</p>
+        <p class="edu-highlight-gold">Higher Secondary</p>
+        <p class="edu-highlight-red">2018–2022</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="reveal">
-  <h2>My Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-icon">💻</div>
-      <h3>Programming</h3>
-      <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon">🌐</div>
-      <h3>Web Dev</h3>
-      <div class="skill-bar"><div class="fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon">🗄️</div>
-      <h3>Database</h3>
-      <div class="skill-bar"><div class="fill" style="width:75%"></div></div>
     </div>
   </div>
 </section>
@@ -83,11 +73,11 @@
   <div class="project-grid">
     <div class="project-card">
       <h3>Portfolio (WEB DEVELOPMENT)</h3>
-      <p>A personal portfolio website...</p>
+      <p>A personal portfolio website built with HTML, CSS, and JavaScript to showcase my skills and achievements.</p>
     </div>
     <div class="project-card">
       <h3>STOCK PREDICTION USING‑AIML</h3>
-      <p>A machine learning project...</p>
+      <p>A machine learning project that predicts stock prices using historical data, linear regression, and AI models.</p>
     </div>
   </div>
 </section>
@@ -110,14 +100,14 @@
   document.addEventListener('DOMContentLoaded', () => {
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(e=>{
-        if(e.isIntersecting) {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
           e.target.classList.add('active');
           observer.unobserve(e.target);
         }
       });
-    },{threshold:0.2});
-    reveals.forEach(r=>observer.observe(r));
+    }, { threshold: 0.2 });
+    reveals.forEach(el => observer.observe(el));
   });
 </script>
 
