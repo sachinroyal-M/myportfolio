@@ -1,50 +1,22 @@
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',sans-serif;background:#f8f9fa;color:#333}
-nav{position:fixed;top:0;width:100%;background:#fff;padding:1rem 2rem;box-shadow:0 2px 4px rgba(0,0,0,0.1);z-index:1000}
-nav ul{display:flex;justify-end;gap:1rem}
-nav a{color:#333;text-decoration:none;font-weight:600;transition:.3s}
-nav a:hover{color:#0077b6}
-section{padding:4rem 2rem;opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
-section.active{opacity:1;transform:translateY(0)}
+/* 🔥 Smooth fade-up on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:80px;background:linear-gradient(to right,#e0eafc,#cfdef3);text-align:center}
-.hero-content{max-width:600px;background:rgba(255,255,255,.9);border-radius:12px;padding:2rem}
-.hero-content img{width:150px;height:150px;border-radius:50%;margin-bottom:1rem}
-.typewriter{display:inline-block;overflow:hidden;border-right:2px solid #0077b6;white-space:nowrap;animation:typing 4s steps(40, end),blink .7s infinite;}
-@keyframes typing{from{width:0} to{width:100%}}@keyframes blink{50%{border-color:transparent}}
-
-#about{background:#fdf6ec}
-#about p{opacity:0;animation:fadeInUp 1s ease forwards .3s}
-
-#education{background:#eafaf1}
-.edu-flow{display:flex;flex-direction:column;gap:2rem}
-.edu-item{display:flex;align-items:flex-start;gap:1rem}
-.edu-point{font-size:1.5rem}
-.gold-text{color:gold;font-weight:600;animation:pop 1s forwards}
-.red-text{color:red;font-weight:600;animation:pop 1s forwards .2s}
-@keyframes pop{0%{transform:scale(0)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
-
-#skills{background:linear-gradient(to right,#232526,#414345);color:#fff}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem}
-.skill-card{background:#2a2b33;padding:2rem;border-radius:8px;position:relative;overflow:hidden;transition:transform .5s}
-.skill-card:hover{transform:scale(1.05)}
-.skill-bar{width:100%;background:#444;border-radius:4px;margin-top:1rem;overflow:hidden}
-.skill-bar .fill{height:8px;background:#ffd700;width:0;animation:fillBar 1s forwards}
-@keyframes fillBar{to{width:100%}}
-
-#projects{background:#f3efff;text-align:center}
-.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
-.project-card{background:#fff;padding:2rem;border-radius:15px;box-shadow:0 8px 18px rgba(0,0,0,0.05);overflow:hidden;position:relative}
-.project-card::after{content:'✨';position:absolute;top:10px;right:10px;opacity:0;font-size:1.5rem;animation:confetti .8s ease-in-out forwards}
-.project-card:hover::after{opacity:1;transform:translateY(-15px);animation:confetti 0.8s ease-in-out}
-@keyframes confetti{0%{transform:translateY(0)}50%{transform:translateY(-15px)}100%{transform:translateY(0)}}
-
-#contact{background:#f0f0f0}
-#contact button{background:#0077b6;color:#fff;border:none;padding:0.8rem;border-radius:6px;cursor:pointer;transition:.3s}
-#contact button:hover{background:#005f8e}
-
-@media(max-width:768px){
-  nav ul{flex-direction:column;align-items:flex-end}
-  .skills-grid,.project-grid{grid-template-columns:1fr}
+/* 🎨 Colored education text */
+.edu-highlight-gold {
+  color: gold;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+.edu-highlight-red {
+  color: red;
+  font-weight: bold;
+  font-size: 1.05rem;
 }
