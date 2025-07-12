@@ -331,3 +331,29 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* ✅ Beautiful Background Colors Per Section */
+
+#hero {
+  background: linear-gradient(to right, #e0eafc, #cfdef3); /* Sky Blue Gradient */
+}
+
+#about {
+  background: #fdf6ec; /* Warm Cream */
+}
+
+#skills {
+  background: linear-gradient(to right, #232526, #414345); /* Deep Slate */
+  color: #fff;
+}
+
+#education {
+  background: #eafaf1; /* Sage Green */
+}
+
+#projects {
+  background: #f3efff; /* Lavender */
+}
+
+#contact {
+  background: #fceee8; /* Blush Beige */
+}
