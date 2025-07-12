@@ -34,7 +34,9 @@
 
 <section id="about" class="reveal">
   <h2>About Me</h2>
-  <p>I’m currently in my third year of B.Tech in Information Technology...</p>
+  <p class="about-para">
+    I’m currently in my third year of Bachelor of Technology in Information Technology at Velammal College of Engineering and Technology, Madurai. Over the course of my academic journey, I’ve developed strong fundamentals in computer science and programming. I have a deep interest in software development, web technologies, and solving complex problems. My aim is to become a skilled IT professional who can contribute to impactful projects and innovative solutions. When I experience burnout, I channel it into learning something new—an approach that consistently elevates me to the next level. Every new concept I explore helps me grow and climb higher with confidence and clarity.
+  </p>
 </section>
 
 <section id="skills" class="reveal">
@@ -69,7 +71,7 @@
 </section>
 
 <section id="projects" class="reveal">
-  <h2>My Projects</h2>
+  <h2 class="section-title">My Projects</h2>
   <div class="project-grid">
     <div class="project-card">
       <h3>Portfolio (WEB DEVELOPMENT)</h3>
@@ -97,6 +99,7 @@
 </section>
 
 <script>
+  // Scroll fade animation
   document.addEventListener('DOMContentLoaded', () => {
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
