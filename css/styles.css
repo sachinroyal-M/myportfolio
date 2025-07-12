@@ -110,15 +110,51 @@ nav a:hover {
   gap: 2rem;
 }
 .skill-card {
-  background: #2a2b33;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
   padding: 2rem;
   text-align: center;
-  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.4), rgba(255,255,255,0) 70%);
+  transform: rotate(25deg);
+  transition: all 0.75s ease;
+  opacity: 0;
+}
+
+.skill-card:hover::before {
+  left: 100%;
+  top: 100%;
+  opacity: 1;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2);
+}
+
 .skill-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
+
 
 /* Education Section */
 #education {
