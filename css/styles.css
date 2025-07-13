@@ -305,3 +305,23 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* 📱 Mobile-Friendly Overrides */
+@media (max-width: 600px) {
+  .hero-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .rotating-text {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .rotating-text span {
+    position: static;
+    display: inline;
+    opacity: 1 !important;
+    animation: none;
+  }
+}
+
