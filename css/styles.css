@@ -21,23 +21,39 @@ nav {
   background: rgba(255, 255, 255, 0.95);
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
 }
-nav ul {
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0077b6;
+}
+
+.nav-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   gap: 1rem;
+  list-style: none;
 }
-nav a {
+
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   transition: color 0.3s;
 }
-nav a:hover {
+.nav-links a:hover {
   color: #0077b6;
 }
+
 
 /* Hero Section */
 #hero {
