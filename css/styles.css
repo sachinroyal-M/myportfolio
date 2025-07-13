@@ -322,6 +322,18 @@ nav {
   }
 }
 /* 📱 Mobile-Friendly Overrides */
+@media(max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .skills-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 📱 Mobile-Friendly Overrides */
 @media (max-width: 600px) {
   .hero-content {
     width: 90%;
@@ -340,4 +352,3 @@ nav {
     animation: none;
   }
 }
-
